@@ -1,0 +1,16 @@
+
+
+def identicas(a, b):
+    # 1. Verificar se ambas as árvores são vazias.
+    if a is None and b is None:
+        return True
+
+    # 2. Comparar as árvores
+    if a is not None and b is not None:
+        return ((a.chave == b.chave) and
+                identicas(a.esquerda, b.esquerda) and
+                identicas(a.direita, b.direita))
+
+    # 3. Sendo uma árvore vazia e outra não.
+    return False
+
