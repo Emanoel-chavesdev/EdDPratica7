@@ -1,0 +1,12 @@
+def balanceada(raiz):
+    # Verifica se a árvore vazia é balanceada
+    if raiz is None:
+        return True
+
+    altura_esq = altura(raiz.esquerda)
+    altura_dir = altura(raiz.direita)
+    # Diferença em unidades das alturas
+    if abs(altura_esq - altura_dir) > 1:
+        return False
+
+    return balanceada(raiz.esquerda) and balanceada(raiz.direita)
