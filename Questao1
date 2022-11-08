@@ -1,0 +1,8 @@
+def minimo(raiz):
+    nodo = raiz
+    while nodo.esquerda is not None:
+        nodo = nodo.esquerda
+    return nodo.chave
+    
+    
+    Resposta: O menor elemento é o nodo mais á esquerda da árvore.
